@@ -1,251 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Ultra&display=swap);
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-  /* Para que no se vean las barras de Scroll*/
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
-  body {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-  }
-
-  /*Header*/
-
-  #header {
-    position: sticky;
-    top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 74px;
-    background-color: rgba(236, 136, 7, 1);
-  }
-
-  /*Flex de los iconos para alignar los al centro */
-
-  .iconos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px;
-    width: 100%;
-  }
-
-  
-
-  #logo {
-    width: 120px;
-    color: rgba(245, 230, 78, 1);
-    font-family: "Ultra";
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.2;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /*MAIN CONTENT*/
-
-  /*Para que el aside se muestre despues del main cpntent*/
-
-  .bodyMain {
-    width: 100%;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  /*El Aside*/
-
-  .side {
-    overflow-y: scroll;
-    width: 100%;
-    background-color: #4d4ba0;
-  }
-
-  /*El Cuadro de Eventos*/
-
-  .events {
-    background-color: black;
-    margin: 10px;
-    height: 120px;
-    overflow: hidden;
-    display: flex;
-  }
-
-  /*El titulo de Aside*/
-
-  .side > p {
-    display: flex;
-    font-family: "Ultra";
-    color: white;
-    font-size: 24px;
-    margin: 10px;
-    justify-content: center;
-  }
-
-  .events > img {
-    width: 80px;
-    height: 50px;
-    margin: 10px;
-    float: left;
-  }
-
-  .events > p {
-    width: 300px;
-    height: 90px;
-    color: white;
-    font-family: "Ultra";
-    font-size: 15px;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /*El contenido Principla*/
-
-  /*Creo una caja grande que lo envuelve todo y lo pone y detras del otro en columna*/
-
-  #main {
-    display: flex;
-    flex-direction: column;
-    background-color: #f5d14e;
-    width: 100%;
-  }
-
-  /*Creo una Seccion para el texto*/
-
-  .mainSec {
-    overflow-y: scroll;
-    height: 200px;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: rgba(158, 245, 78, 1);
-  }
-
-  .imgSec {
-    float: left;
-    margin: 10px;
-  }
-
-  .textSec {
-    margin: 10px;
-    font-family: "Ultra";
-    font-style: normal;
-    font-size: 14px;
-    font-weight: 400;
-  }
-
-  /*Creo una caja para el texto y la imagen*/
-  .contMain {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  /*Creo una caja grande donde van a estar todos los Articles*/
-  .secArt {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: visible;
-  }
-
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 11px;
-    width: 184px;
-    height: 147px;
-    border-radius: 10px;
-    background-color: rgba(158, 245, 78, 1);
-    font-family: "Ultra";
-    font-style: normal;
-    font-size: 14px;
-    font-weight: 400;
-  }
-
-  article > p {
-    margin-top: 10px;
-  }
-
-  /*FOOTER*/
-
-  #foot {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    background-color: rgba(236, 136, 7, 1);
-  }
-
-  .iconosFoot {
-    height: 80px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-/*****************************PHONE QUERY*************************************************/
-  @media only screen and (min-width: 414px) and (max-width: 960px) {
-
-    /*Para que el menu se mustre encima de la pantalla esto envia a las 4 baras al fondo*/
-
-  #menu {
-    z-index: 0;
-  }
-  
-    /*HOVER MENU*/
-
-  .nav {
-    display: none;
-    position: absolute;
-    width: 100px;
-    background-color: #4d4ba0;
-  }
-
-  .nav a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    padding: 12px 16px;
-    font-family: "Ultra";
-    font-size: 12px;
-  }
-
-    .nav a:hover {
-      background-color: black;
-    }
-
-    #menu:hover .nav {
-      display: block;
-      /*Para mostrar el menu encima de las 3 barras*/
-      z-index: 1;
-    }
-  }
-
-/*******************************QUERY WEB PC**********************************************/
-
 @media only screen and (min-width: 960px) {
   /* Para que no se vean las barras de Scroll*/
 
@@ -283,6 +37,10 @@
     width: 100%;
   }
 
+  #menu {
+    display: flex;
+  }
+
   /*Para esconder las 3 barritas que solo se muestra en movil*/
 
   #menu > img {
@@ -317,6 +75,7 @@
     display: none;
   }
 
+  /*HOVER MENU*/
 
   /*Para que el nav sea simetrico*/
 
@@ -353,7 +112,9 @@
 
   /*Para el tamaño del Aside y que ocupe el 30 de la pantalla y se vea alado del content principal*/
   .side {
+    float: right;
     height: 900px;
+    width: 30%;
     background-color: #4d4ba0;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -415,10 +176,6 @@
     background-color: #f5d14e;
     width: 70%;
     height: 900px;
-  }
-
-  .bodyMain{
-    flex-direction: row-reverse;
   }
 
   /*Creo un contenedor para el texto para aligniarlo*/
