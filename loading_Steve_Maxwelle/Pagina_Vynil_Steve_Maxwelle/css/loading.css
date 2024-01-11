@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  /*background-color: rgba(245, 230, 78, 1);*/
+  background-color: #4d4ba0;
+}
+.circulo {
+  width: 200px;
+  height: 200px;
+  border-color: aliceblue;
+}
+
+.heavy {
+  font: bold 30px sans-serif;
+}
+.Rrrrr {
+  font: italic 40px serif;
+  fill: red;
+}
